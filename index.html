@@ -14,7 +14,7 @@
     model-viewer {
       width: 100vw; height: 100vh;
       --progress-bar-color: #ffffff;
-      --progress-bar-height: 3px;
+      --progress-bar-height: 4px;
     }
     .title {
       position: fixed; bottom: 40px; left: 0; right: 0;
@@ -31,18 +31,17 @@
 </head>
 <body>
   <model-viewer
-    src="model.glb"
+    src="model_textured.glb"
     camera-controls
     auto-rotate
     auto-rotate-delay="0"
     rotation-per-second="40deg"
     shadow-intensity="0.8"
     shadow-softness="0.6"
-    exposure="1.4"
+    exposure="1.2"
     tone-mapping="neutral"
     environment-image="neutral"
     interaction-prompt="none"
-    ar-status="not-presenting"
     min-camera-orbit="auto 20deg auto"
     max-camera-orbit="auto 80deg auto">
   </model-viewer>
