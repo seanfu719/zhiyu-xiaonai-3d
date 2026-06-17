@@ -1,0 +1,6 @@
+# Ignore everything except what we need for the 3D preview
+*
+!.gitignore
+!index.html
+!zhiyu_xiaonai_3d_20260617_1625.glb
+!README.md

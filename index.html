@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>植愈小奈 - 3D Model Viewer</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body { margin: 0; overflow: hidden; background: #f0f0f0; font-family: sans-serif; }
+    model-viewer { width: 100vw; height: 100vh; }
+  </style>
+</head>
+<body>
+  <model-viewer src="zhiyu_xiaonai_3d_20260617_1625.glb"
+    camera-controls auto-rotate shadow-intensity="1"
+    environment-image="neutral"
+    exposure="1.2"
+    tone-mapping="neutral">
+  </model-viewer>
+</body>
+</html>
