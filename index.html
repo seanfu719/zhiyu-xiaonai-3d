@@ -3,19 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>植愈小奈 - 3D Model Viewer</title>
+  <title>植愈小奈 - 3D 手办</title>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
-    body { margin: 0; overflow: hidden; background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%); font-family: sans-serif; }
-    model-viewer { width: 100vw; height: 100vh; --progress-bar-color: #4caf50; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: linear-gradient(135deg, #2d5016 0%, #4a7c2e 30%, #6da84d 60%, #8bc34a 100%);
+      overflow: hidden; font-family: system-ui, sans-serif;
+    }
+    model-viewer {
+      width: 100vw; height: 100vh;
+      --progress-bar-color: #ffffff;
+      --progress-bar-height: 3px;
+    }
+    .title {
+      position: fixed; bottom: 40px; left: 0; right: 0;
+      text-align: center; color: rgba(255,255,255,0.9);
+      font-size: 18px; letter-spacing: 4px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+      pointer-events: none; z-index: 10;
+    }
+    .title small {
+      display: block; font-size: 12px; margin-top: 6px;
+      opacity: 0.6; letter-spacing: 2px;
+    }
   </style>
 </head>
 <body>
-  <model-viewer src="zhiyu_xiaonai_3d_20260617_1625.glb"
-    camera-controls auto-rotate shadow-intensity="1"
+  <model-viewer
+    src="model.glb"
+    camera-controls
+    auto-rotate
+    auto-rotate-delay="0"
+    rotation-per-second="40deg"
+    shadow-intensity="0.8"
+    shadow-softness="0.6"
+    exposure="1.4"
+    tone-mapping="neutral"
     environment-image="neutral"
-    exposure="1.2"
-    tone-mapping="neutral">
+    interaction-prompt="none"
+    ar-status="not-presenting"
+    min-camera-orbit="auto 20deg auto"
+    max-camera-orbit="auto 80deg auto">
   </model-viewer>
+  <div class="title">
+    植愈小奈
+    <small>超能植愈系列 · Q版手办</small>
+  </div>
 </body>
 </html>
